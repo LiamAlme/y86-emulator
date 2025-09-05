@@ -1,16 +1,23 @@
 #include <iostream>
 #include <iomanip>
 #include <climits>
+#include <string>
+#include <fstream>
 
 using namespace std;
 using Byte = unsigned char;
 
+// System ram which contains 8192 bytes
 struct MEM{
     long long mem[65536];
     long long operator[](long long pc){
         return mem[pc];
     }
 };
+
+void readObjectFile(string fname, MEM& instructionMemory){
+
+}
 
 struct CPU{
     long long rax;
